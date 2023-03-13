@@ -10,7 +10,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Characters />} />
-        <Route path="/:characterName" element={<CharactersCard />} />
+        <Route path="/:characterId" element={<CharactersCard />} />
       </Route>
     </Routes>
   );

@@ -1,7 +1,9 @@
 import { createSelector } from "@reduxjs/toolkit";
 
 export const selectCharacters = (state) => state.characters.characters;
-export const selectFilterValue = (state) => state.characters.filterValue;
+export const selectSingleCharacter = (state) =>
+  state.characters.singleCharacter;
+export const selectFilterValue = (state) => state.filter.filterValue;
 export const selectIsLoading = (state) => state.characters.isLoading;
 export const selectError = (state) => state.characters.error;
 

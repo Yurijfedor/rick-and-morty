@@ -14,3 +14,15 @@ export const fetchAllCharacters = createAsyncThunk(
     }
   }
 );
+
+export const fetchSingleCharacter = createAsyncThunk(
+  "characters/fetchSingle",
+  async (id, thunkAPI) => {
+    try {
+      const response = await axios.get(`/character/${id}`);
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);

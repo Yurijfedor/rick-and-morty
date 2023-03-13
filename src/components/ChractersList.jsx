@@ -1,4 +1,5 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchSingleCharacter } from "../redux/operations";
 import { selectVisibleCharacters, selectFilterValue } from "../redux/selectors";
 import {
   CharactersListStyled,
@@ -13,6 +14,11 @@ import {
 export const CharactersList = () => {
   const characters = useSelector(selectVisibleCharacters);
   const filterValue = useSelector(selectFilterValue);
+  const dispatch = useDispatch();
+
+  const handleClick = (id) => {
+    dispatch(fetchSingleCharacter(id));
+  };
 
   return (
     <CharactersListStyled>
@@ -20,7 +26,10 @@ export const CharactersList = () => {
         characters.map((character) => {
           return (
             <ItemStyled key={character.id}>
-              <LinkStyled to={`/${character.name}`}>
+              <LinkStyled
+                to={`/${character.id}`}
+                onClick={() => handleClick(character.id)}
+              >
                 <ImgStyled src={character.image} alt={character.name} />
                 <CardContentWrapp>
                   <CardTitle>{character.name}</CardTitle>

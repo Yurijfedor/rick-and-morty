@@ -10,6 +10,10 @@ export const fetchAllCharactersSuccessReducer = (state, action) => {
   });
 };
 
+export const fetchSingleCharacterSuccessReducer = (state, action) => {
+  state.singleCharacter = action.payload;
+};
+
 export const pendingReducer = (state) => {
   state.isLoading = true;
   state.error = null;

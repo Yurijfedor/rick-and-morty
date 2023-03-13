@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilterValue } from "../redux/charactersSlice";
+import { setFilterValue } from "../redux/filterSlice";
 import { selectFilterValue } from "../redux/selectors";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import sprite from "../images/sprite.svg";
