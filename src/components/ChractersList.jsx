@@ -15,7 +15,6 @@ export const CharactersList = () => {
   const characters = useSelector(selectVisibleCharacters);
   const filterValue = useSelector(selectFilterValue);
   const dispatch = useDispatch();
-
   const handleClick = (id) => {
     dispatch(fetchSingleCharacter(id));
   };
