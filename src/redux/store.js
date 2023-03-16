@@ -12,10 +12,12 @@ import {
 import storage from "redux-persist/lib/storage";
 import { charactersReducer } from "./charactersSlice";
 import { filterReducer } from "./filterSlice";
+import { userReducer } from "./userSlice";
 
 const rootReducer = combineReducers({
   characters: charactersReducer,
   filter: filterReducer,
+  user: userReducer,
 });
 
 const persistConfig = {

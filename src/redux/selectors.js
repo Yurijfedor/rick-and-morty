@@ -4,6 +4,7 @@ export const selectCharacters = (state) => state.characters.characters;
 export const selectSingleCharacter = (state) =>
   state.characters.singleCharacter;
 export const selectFilterValue = (state) => state.filter.filterValue;
+export const selectUser = (state) => state.user;
 export const selectIsLoading = (state) => state.characters.isLoading;
 export const selectError = (state) => state.characters.error;
 

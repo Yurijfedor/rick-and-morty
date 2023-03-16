@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/es/integration/react";
 import { store, persistor } from "./redux/store";
+import "./firebase";
 
 const onBeforeLift = () => ({});
 

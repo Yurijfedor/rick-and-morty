@@ -7,12 +7,20 @@ export const TitleStyled = styled.h3`
   line-height: 1.2;
   letter-spacing: 0.15px;
   color: #8e8e93;
+  @media (min-width: 1440px) {
+    text-align: center;
+    margin-top: 48px;
+  }
 `;
 
 export const InformationList = styled.ul`
   padding-left: 16px;
   margin-top: 16px;
   margin-bottom: 61px;
+  @media (min-width: 1440px) {
+    width: 413px;
+    margin: 48px auto 142px auto;
+  }
 `;
 
 export const InformationItem = styled.li`

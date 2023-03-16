@@ -11,4 +11,8 @@ export const LinkStyled = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  @media (min-width: 1440px) {
+    margin-top: 21px;
+    margin-left: 50px;
+  }
 `;
