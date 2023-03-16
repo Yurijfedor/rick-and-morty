@@ -20,4 +20,8 @@ export const AuthButton = styled(NavLink)`
     background-color: #29d1c3;
     color: white;
   }
+  @media (min-width: 768px) {
+    width: 150px;
+    margin-left: auto;
+  }
 `;
