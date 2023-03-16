@@ -6,10 +6,12 @@ import { Information } from "./Information";
 export const CharacterCard = () => {
   const character = useSelector(selectSingleCharacter);
   return (
-    <>
-      <ImgStyled src={character.image} alt={character.name} />
-      <NameStyled>{character.name}</NameStyled>
-      <Information character={character} />
-    </>
+    character && (
+      <>
+        <ImgStyled src={character.image} alt={character.name} />
+        <NameStyled>{character.name}</NameStyled>
+        <Information character={character} />
+      </>
+    )
   );
 };
