@@ -19,7 +19,7 @@ root.render(
         persistor={persistor}
         onBeforeLift={onBeforeLift}
       >
-        <BrowserRouter basename="/">
+        <BrowserRouter basename="/rick-and-morty">
           <App />
         </BrowserRouter>
       </PersistGate>
